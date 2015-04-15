@@ -1,0 +1,17 @@
+{
+  "name": "discussionboard",
+  "version": "1.0.0",
+  "description": "discussion board",
+  "main": "server.js",
+  "author": "Vincent Jonany",
+  "contributors": [{ 
+    "name": "Vincent Jonany",
+    "email": "jonanv@uw.edu"
+  }],
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.9.3",
+    "express": "^4.10.2",
+    "ejs": ">=0.0.1"
+  }
+}
