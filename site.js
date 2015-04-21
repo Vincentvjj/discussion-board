@@ -18,9 +18,6 @@ exports.mainpage = function(req, res) {
 
 
 
-
-
-
 exports.ajaxrequest = function(req, res) {
 	var deptname = req.query.deptname;
 	connection.query('SELECT * FROM departments WHERE dept_name = "' + deptname + '"', function(err, rows) {
@@ -62,7 +59,6 @@ exports.send = function(req, res) {
 		+ 'VALUES(' + pc + ',' + pd + ',' + pt + ',' + deptid + ')', function() {
 
 			connection.query('SELECT post_id FROM posts WHERE post_title ="' + posttitle + '"', function(err, rows, fields) {
-				console.log(rows);
 				if(err) {
 					console.log(err);
 				}

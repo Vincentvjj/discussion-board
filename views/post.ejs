@@ -55,9 +55,13 @@
 
         <section class="comment-section">
             <h2>Comments</h2>
+            <div class="no-comments-yet" ng-if="isEmpty">
+                    <p>There are no comments yet! Be the first to review this!</p>
+            </div>
             <div ng-repeat="comment in comments">
                 <p id="comment-title">{{comment.reply_title}}</p>
                 <div class="info-comment">
+                    <img src="img/no-face.jpg" alt="no face icon" width="97px" height="80px" align="left"/>
                     <p id="user-name">{{comment.reply_by}}</p>
                     <p id="comment-comment">{{comment.reply_content}}</p>
                     <p id="comment-comment">{{comment.reply_date}}</p><br>

@@ -40,7 +40,7 @@ exports.sendreplies = function(req, res) {
 		var author = req.body.data.name;
 
 		connection.query('INSERT INTO replies(reply_content, reply_title, reply_date, post_id, reply_by ,reply_votes)'
-			+ 'VALUE("' +  replycont + '","' + replycont + '","' + datetime + '",' + postid + ',"' + author + '",'  + 0 + ')', function(err) {
+			+ 'VALUE("' +  replytitle + '","' + replycont + '","' + datetime + '",' + postid + ',"' + author + '",'  + 0 + ')', function(err) {
 				if(err) {
 					console.log(err);
 				}

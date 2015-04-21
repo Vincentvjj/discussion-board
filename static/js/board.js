@@ -90,6 +90,11 @@ myApp.controller('CommentsController', function($scope, $http) {
             }).success(function(data) {
                 $scope.$apply(function() {
                   $scope.comments = data;
+                  if(data.length == 0) {
+                    $scope.isEmpty = true;
+                  } else {
+                     $scope.isEmpty = false;
+                  }
                 });
                  
             });
@@ -118,21 +123,6 @@ myApp.controller('CommentsController', function($scope, $http) {
                 };
                 $scope.refreshComments();
             });
-
-            // $.ajax({
-            //     url: "/send/replies",
-            //     data: {
-            //         data: $scope.newComments
-            //     },
-            //     type: 'POST',
-            //     dataType: 'json',
-            //     success: function() {
-            //         console.log('asdasd');
-            //         $scope.refreshComments();
-            //     }
-
-            // });
-
     
         };
 });
